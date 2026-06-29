@@ -1,0 +1,6 @@
+{
+  "name": "VOID://ORIGIN",
+  "description": "The digital archive of Sogolo Donaldson (ST VOID) documenting his vision, projects, ideas, and long-term roadmap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

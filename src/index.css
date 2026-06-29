@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-void-bg: #050505;
+  --color-void-card: #0e0e0e;
+  --color-void-border: #1a1a1a;
+  --color-electric-blue: #00d2ff;
+  --color-void-silver: #a3a3a3;
+}
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #f5f5f5;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00d2ff;
+  }
+}
+
+/* Futuristic Scanline and Terminal Glow Effects */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 20;
+}
+
+.glow-blue {
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+.box-glow {
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+}
+
+/* Custom Active state styling for navigation targeting */
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 12px;
+  background-color: #00d2ff;
+  box-shadow: 0 0 8px #00d2ff;
+  border-radius: 9999px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+/* On mobile/smaller screens in dropdown menu, keep it clean */
+#sys-segment-menu .active::after {
+  left: 4px;
+  height: 60%;
+}
+
