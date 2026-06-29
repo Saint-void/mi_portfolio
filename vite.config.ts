@@ -13,7 +13,7 @@ export default defineConfig(() => {
     },
     server: {
       allowedHosts: [
-        'true',
+        'mi-portfolio-8r5f.onrender.com',
       ],
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
